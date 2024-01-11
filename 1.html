@@ -1,0 +1,38 @@
+<!-- //Viết  hàm  nhập/xuất  mảng  gồm  n  phần  tử,  xuất  ra  giá  trị max, min của mảng.m,. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dang Xuan Manh</title>
+</head>
+<body>
+    <script>
+        function importArray(){
+            var array = [];
+            var n = parseInt(prompt("Nhap so phan tu cua mang: "));
+            for(var i=0; i < n; i++){
+                var element = parseInt(prompt("Nhap phan tu thu "+ (i + 1) +" cho mang: "));
+                array.push(element);
+            }
+            return array;
+        }
+
+        function exportArray(array){
+            var max = array[0];
+            var min = array[0];
+            for(var  i=0; i < array.length; i++){
+                if(array[i] > max){
+                    max = array[i];
+                }
+                if(array[i] < min){
+                    min = array[i];
+                }
+            }
+            alert("Gia tri lon nhat la: "+ max +", gia tri nho nhat la: "+ min +".")
+        }
+
+        exportArray(importArray());
+    </script>
+</body>
+</html>

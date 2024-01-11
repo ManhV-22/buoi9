@@ -1,0 +1,22 @@
+<!-- Viết hàm thêm 1 phần tử x vào mảng đã có thứ tự tăng dần sao cho sau khi thêm mảng vẫn tăng. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dang Xuan Manh</title>
+</head>
+<body>
+    <script>
+        function addElement(){
+            var array = [8, 15, 27, 35, 40, 55, 61, 79, 86, 99, 100];
+            var newElement = parseInt(prompt("Nhap phan tu muon them: "));
+            array.push(newElement);
+            array.sort(function(a, b){return a - b});
+            alert("Mang sau khi them phan tu la: "+ array +".")
+        }
+
+        addElement();
+    </script>
+</body>
+</html>

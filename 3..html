@@ -1,0 +1,36 @@
+<!-- Viết hàm thêm 1 phần tử x vào mảng tại vị trí thứ k . -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dang Xuan Manh</title>
+</head>
+<body>
+    <script>
+        function nhapMang(){
+            var n = parseInt(prompt("Nhap so phan tu cua mang: "));
+            var array = [];
+            for(var i=0; i < n; i++){
+                var phanTu = parseInt(prompt("Nhap phan tu thu "+ (i + 1) +" cho mang: "));
+                array.push(phanTu);
+            }
+            return array;
+        }
+        
+        function addElement(array){
+            var newElement = parseInt(prompt("Nhap phan tu muon them: "));
+            var n = parseInt(prompt("Nhap vi tri muon them: "));
+            if(n >= 0 && n <= array.length){
+                array.splice(n - 1, 0, newElement);
+                alert("Mang sau khi them phan tu la: "+ array +".")                
+            }else{
+                alert("Vi tri khong hop le!!!!");
+            }
+        }
+        var mangNhap = nhapMang();
+        addElement(mangNhap);
+    </script>
+</body>
+</html>

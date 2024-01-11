@@ -1,0 +1,24 @@
+<!-- Viết hàm xoá một phần tử x trong mảng. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dang Xuan Manh</title>
+</head>
+<body>
+    <script>
+        
+        function deleteElement(){
+            var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            alert("Mang ban dau la: "+ array +".");
+            var n = parseInt(prompt("Nhap phan tu muon xoa: "));
+            array = array.filter(item => item != n);
+            alert("Mang sau khi xoa phan tu la: "+ array +".")
+            return array;
+        }
+
+        deleteElement();
+    </script>
+</body>
+</html>

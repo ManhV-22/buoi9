@@ -1,0 +1,43 @@
+<!-- viết chương trình nhập 2 mảng a,b gồm n phần tử, trộn 2 mảng lại và sắp xếp theo thứ tự tăng dần -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dang Xuan Manhh</title>
+</head>
+<body>
+    <script>
+        function nhapMangA(){
+            var n = parseInt(prompt("Nhap so phan tu cua mang A: "));
+            var arrayA = [];
+            for(var i=0; i < n; i++){
+                var phanTuA = parseInt(prompt("Nhap phan tu thu "+ (i + 1) +" cua mang A: "));
+                arrayA.push(phanTuA);
+            }
+            return arrayA;
+        }
+
+        function nhapMangB(){
+            var n = parseInt(prompt("Nhap so phan tu cua mang B: "));
+            var arrayB = [];
+            for(var i=0; i < n; i++){
+                var phanTuB = parseInt(prompt("Nhap gia tri phan tu "+ (i + 1) +" cua mang B: "));
+                arrayB.push(phanTuB);
+            }
+            return arrayB;
+        }
+
+        function gopMang(arrayA, arrayB){
+            var arrayNum = [];
+            arrayNum = arrayNum.concat(arrayA, arrayB);
+            arrayNum.sort(function(a, b){return a - b});
+            alert("Mang sau khi gop va sap xep la: "+ arrayNum  +".");
+        }
+
+        var mangNhapA = nhapMangA();
+        var mangNhapB = nhapMangB();
+        gopMang(mangNhapA, mangNhapB);
+    </script>
+</body>
+</html>
